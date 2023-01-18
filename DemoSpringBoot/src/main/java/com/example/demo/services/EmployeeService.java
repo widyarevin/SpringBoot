@@ -8,4 +8,5 @@ public interface EmployeeService {
     public Employee getById(Integer id);
     public boolean save(Employee employee);
     public boolean delete(Integer id);
+    // public Employee getEmail(String Email);
 }

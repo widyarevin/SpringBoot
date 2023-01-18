@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.demo.DTO.user.LoginDTO;
 import com.example.demo.services.EmployeeService;
 import com.example.demo.services.RoleService;
 import com.example.demo.services.UserService;
@@ -26,6 +28,12 @@ public class EmployeeController {
         model.addAttribute("user", userService.getAll());
         model.addAttribute("role", roleService.getAll());
         return "employee/index";
+    }
+
+    @GetMapping("profil")
+    public String profil(Model model){
+        model.addAttribute("user", new LoginDTO());
+        return "employee/profil";
     }
 
 }

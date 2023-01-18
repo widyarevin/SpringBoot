@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profil User</h1>
+      <ul th:each="user : ${user}">
+        <!-- <li th:text="${user.employee.Id}"></li> -->
+        <!-- <li th:text="${user.employee.FullName}"></li> -->
+        <li th:text="${user.Email}"></li>
+        <!-- <li th:text="${user.role.Name}"></li> -->
+      </ul>
+    </div>
+  </body>
+</html>
